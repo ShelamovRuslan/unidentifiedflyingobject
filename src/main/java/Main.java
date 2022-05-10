@@ -35,9 +35,10 @@ public class Main {
         // Хочу добавить сохранение .report(); доклада в базу после вызова метода.
 
         UFO realUFO = new RealUFO();
+        realUFO.fly();
         realUFO.create();
         realUFO.report();
-        realUFO.fly();
+
 
         /**
          * .report();

@@ -13,7 +13,7 @@ public interface TestComponent {
 
     default boolean repair () {
 
-        if (((int) (Math.random() * (3 - 1)) + 1) == 2? true : false){
+        if (((int) (Math.random() * (3 - 1)) + 1) == 2){
             System.out.println("Починка прошла успешно");
             return false;
         } else {
