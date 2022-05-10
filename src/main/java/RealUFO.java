@@ -1,6 +1,6 @@
 public class RealUFO implements UFO {
 
-    boolean detectedUFO;
+    private boolean detectedUFO;
 
     @Override
     public void create() {

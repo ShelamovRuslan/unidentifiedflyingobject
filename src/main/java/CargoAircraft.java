@@ -24,9 +24,7 @@ public class CargoAircraft extends Plane implements СreateDateClass {
             System.out.println("Груз доставлен");
     }
 
-
      // Планирую переписать реализацию метода .fly().
-
 
     private boolean isDisease (){
         if (pilotCabine.pilotFirst.disease && pilotCabine.pilotSecond.disease){
