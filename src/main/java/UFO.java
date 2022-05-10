@@ -1,5 +1,8 @@
-public class UFO {
-    public static void main(String[] args) {
+public interface UFO {
+    void create ();
+    void fly ();
 
-    }
+    void report();
+
+
 }
