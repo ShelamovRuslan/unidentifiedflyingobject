@@ -3,5 +3,4 @@ public interface UFO {
     void fly ();
     void report();
 
-
 }

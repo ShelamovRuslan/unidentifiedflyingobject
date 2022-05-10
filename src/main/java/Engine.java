@@ -1,4 +1,4 @@
-public abstract class Engine {
+public abstract class Engine extends СomponentPlane {
 
     protected String model;
 
