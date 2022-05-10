@@ -1,7 +1,7 @@
 public class CargoBody extends Body{
 
-    public CargoBody() {
-        this.size = 84;
-        this.weight = 285_000;
+    public CargoBody(double size, int weight) {
+        this.size = size;
+        this.weight = weight;
     }
 }

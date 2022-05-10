@@ -1,14 +1,16 @@
 import java.util.Date;
 
-import static java.lang.String.format;
-
-public class CargoAircraft extends Plane{
+public class CargoAircraft extends Plane implements СreateDateClass {
     @Override
     public void create() {
-        this.body = new CargoBody();
-        this.gasTank = new GasTank(405_000);
-        this.engine = new Engine[] {new TurbojetEngine(), new TurbojetEngine(), new TurbojetEngine(), new TurbojetEngine(), new TurbojetEngine(), new TurbojetEngine()} ;
-        this.cargoBay = new CargoBay(250_000);
+        DateClass date = createDateClassCargo();
+        this.body = new CargoBody(date.cargoBodySize(), date.cargoBayWeight());
+        this.gasTank = new GasTank(date.cargoFuel());
+        this.engine = new Engine[date.TurbojetEngineQuantity()];
+        for (byte i = 0; i < date.TurbojetEngineQuantity(); i++) {
+            this.engine[i] = new TurbojetEngine(date.TurbojetEngine());
+        }
+        this.cargoBay = new CargoBay(date.cargoBayWeight());
         this.pilotCabine = new CargoCabine();
     }
 
@@ -21,6 +23,10 @@ public class CargoAircraft extends Plane{
         else
             System.out.println("Груз доставлен");
     }
+
+
+     // Планирую переписать реализацию метода .fly().
+
 
     private boolean isDisease (){
         if (pilotCabine.pilotFirst.disease && pilotCabine.pilotSecond.disease){
@@ -51,8 +57,8 @@ public class CargoAircraft extends Plane{
                 this.cargoBay.weight/1000,
                 this.gasTank.fuel));
         if (isDisease())
-            System.out.println("Пилот болен, рейс не будет совершен.");
+            System.out.println("Пилот выглядит уставшим.");
         else if (getAge())
-            System.out.println("Ваш пилот вышел на пенсию, найдите нового!");
+            System.out.println("Подздравляем пилота с днем рождения!");
     }
 }
