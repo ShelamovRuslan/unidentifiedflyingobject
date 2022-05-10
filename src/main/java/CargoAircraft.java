@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class CargoAircraft extends Plane implements СreateDateClass {
+public class CargoAircraft extends Plane implements CreateDateClass {
     @Override
     public void create() {
         DateClass date = createDateClassCargo();
@@ -11,7 +11,7 @@ public class CargoAircraft extends Plane implements СreateDateClass {
             this.engine[i] = new TurbojetEngine(date.TurbojetEngine());
         }
         this.cargoBay = new CargoBay(date.cargoBayWeight());
-        this.pilotCabine = new CargoCabine();
+        this.pilotCockpit = new CargoCockpit();
     }
 
     @Override
@@ -27,13 +27,11 @@ public class CargoAircraft extends Plane implements СreateDateClass {
      // Планирую переписать реализацию метода .fly().
 
     private boolean isDisease (){
-        if (pilotCabine.pilotFirst.disease && pilotCabine.pilotSecond.disease){
-            return true;} else {return false;}
+        return pilotCockpit.pilotFirst.disease && pilotCockpit.pilotSecond.disease;
     }
 
     private boolean getAge (){
-        if (pilotCabine.pilotFirst.age < 50 && pilotCabine.pilotSecond.age < 50){
-            return false;} else {return true;}
+        return pilotCockpit.pilotFirst.age >= 50 || pilotCockpit.pilotSecond.age >= 50;
     }
     @Override
     public void report () {

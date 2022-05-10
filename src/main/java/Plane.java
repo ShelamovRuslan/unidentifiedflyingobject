@@ -5,8 +5,8 @@ public abstract class Plane implements UFO {
     protected Engine[] engine;
     protected CargoBay cargoBay;
 
-    protected PassengerСompartment passengerCompartment;
-    protected Cabine pilotCabine;
+    protected PassengerCompartment passengerCompartment;
+    protected Cockpit pilotCockpit;
 
 
 

@@ -4,7 +4,7 @@ public class RealUFO implements UFO {
 
     @Override
     public void create() {
-        if (this.detectedUFO == true) {
+        if (this.detectedUFO) {
             System.out.println(""" 
                     СЕНСАЦИЯ!
                     Двадцатипятилетний Иван, работник завода, видел НЛО!
@@ -39,7 +39,7 @@ public class RealUFO implements UFO {
     @Override
     public void report() {
 
-        if (detectedUFO) {
+        if (this.detectedUFO) {
             System.out.println("""
                      
                      Репортер:

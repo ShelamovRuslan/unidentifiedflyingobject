@@ -1,4 +1,4 @@
-public interface СreateDateClass {
+public interface CreateDateClass {
 
     default DateClass createDateClassCargo() {
         return new DateClass(

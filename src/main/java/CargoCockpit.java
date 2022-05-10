@@ -1,6 +1,6 @@
-public class CargoCabine extends Cabine {
+public class CargoCockpit extends Cockpit {
 
-    public CargoCabine() {
+    public CargoCockpit() {
         this.pilotFirst = new Pilot();
         this.pilotSecond = new Pilot();
     }

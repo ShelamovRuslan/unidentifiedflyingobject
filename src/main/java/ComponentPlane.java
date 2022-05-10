@@ -1,4 +1,4 @@
-public abstract class СomponentPlane implements TestComponent {
+public abstract class ComponentPlane implements TestComponent {
 
     protected boolean defective;
 
